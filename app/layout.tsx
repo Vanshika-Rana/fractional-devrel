@@ -1,6 +1,15 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import {
+  KEYWORDS,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_TITLE,
+  SITE_URL,
+  TWITTER_HANDLE,
+} from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,27 +21,57 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const description =
-  "Fractional DevRel for developer-tool teams. I help developers go from curious to shipped: docs, demos, onboarding, and community.";
-
 export const metadata: Metadata = {
-  metadataBase: new URL("https://devrel.van.codes"),
-  title: "Vanshika Rana, fractional DevRel",
-  description,
+  metadataBase: new URL(SITE_URL),
+  applicationName: SITE_NAME,
+  title: {
+    default: SITE_TITLE,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  keywords: KEYWORDS,
+  authors: [{ name: SITE_NAME, url: "https://van.codes" }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  category: "technology",
   alternates: { canonical: "/" },
+  formatDetection: { email: false, address: false, telephone: false },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
-    title: "Vanshika Rana, fractional DevRel",
-    description,
-    url: "https://devrel.van.codes",
-    siteName: "Vanshika Rana",
     type: "website",
+    url: "/",
+    siteName: SITE_NAME,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vanshika Rana, fractional DevRel",
-    description,
+    site: TWITTER_HANDLE,
+    creator: TWITTER_HANDLE,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
   },
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION,
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  colorScheme: "light",
+  themeColor: "#f6f3ec",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -49,6 +88,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Skip to content
         </a>
         {children}
+        <Analytics />
       </body>
     </html>
   );

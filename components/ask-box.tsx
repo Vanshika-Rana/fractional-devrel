@@ -3,6 +3,7 @@
 import { ArrowUp, Circle } from "@phosphor-icons/react";
 import { useState } from "react";
 import { useReducedMotion } from "motion/react";
+import { track } from "@vercel/analytics";
 
 type Turn = { role: "user" | "assistant"; content: string };
 
@@ -50,6 +51,7 @@ export function AskBox() {
   async function ask(question: string) {
     const text = question.trim();
     if (!text || busy) return;
+    track("chat_question_asked", { question: text.slice(0, 255) });
     const history = turns;
     setTurns((current) => [...current, { role: "user", content: text }]);
     setDraft("");

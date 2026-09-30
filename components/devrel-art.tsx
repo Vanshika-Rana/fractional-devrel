@@ -1,5 +1,5 @@
 // Decorative sticker-style illustration: a terminal, a chat bubble, and a rising chart.
-// Pure SVG, colored through the theme tokens so it follows light and dark mode.
+// Pure SVG, colored through the theme tokens.
 
 export function DevrelArt({ className = "" }: { className?: string }) {
   return (

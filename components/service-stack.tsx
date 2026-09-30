@@ -48,7 +48,7 @@ export function ServiceStack() {
               {task.fit}
             </p>
             <div className="mt-8">
-              <ButtonLink>Let&apos;s talk</ButtonLink>
+              <ButtonLink location="pricing-tier-1">Let&apos;s talk</ButtonLink>
             </div>
           </div>
         </div>
@@ -77,7 +77,7 @@ export function ServiceStack() {
             <p className="mt-5 text-lg leading-relaxed text-muted">{sprint.summary}</p>
             <p className="mt-4 text-base leading-relaxed text-muted">{sprint.fit}</p>
             <div className="mt-8">
-              <ButtonLink>Let&apos;s talk</ButtonLink>
+              <ButtonLink location="pricing-tier-2">Let&apos;s talk</ButtonLink>
             </div>
           </div>
           <ul className="grid gap-3 lg:col-span-7">
@@ -134,7 +134,7 @@ export function ServiceStack() {
               {retainer.fit}
             </p>
             <div className="mt-8">
-              <ButtonLink>Let&apos;s talk</ButtonLink>
+              <ButtonLink location="pricing-tier-3">Let&apos;s talk</ButtonLink>
             </div>
           </div>
           <div className="lg:col-span-5 lg:self-center lg:text-center">

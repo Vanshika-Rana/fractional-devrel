@@ -12,20 +12,6 @@
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #141414;
-    --surface: #1e1e1e;
-    --ink: #f6f3ec;
-    --muted: #d4cfc4;
-    --accent: #ff7aa8;
-    --sun: #ffe14a;
-    --on-sun: #1c1c1c;
-    --line: #f6f3ec;
-    color-scheme: dark;
-  }
-}
-
 @theme inline {
   --color-bg: var(--bg);
   --color-surface: var(--surface);

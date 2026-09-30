@@ -10,29 +10,14 @@ import { SiteHeader } from "@/components/site-header";
 import { Sticker } from "@/components/sticker";
 import { ButtonLink } from "@/components/button-link";
 import { EMAIL, TALK_HREF, faqs, profiles } from "@/lib/content";
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: "Vanshika Rana",
-  url: "https://devrel.van.codes",
-  email: EMAIL,
-  description:
-    "Fractional DevRel for seed to Series B developer-tool teams. Docs, demos, onboarding, and community.",
-  areaServed: "Worldwide",
-  address: {
-    "@type": "PostalAddress",
-    addressCountry: "IN",
-  },
-  sameAs: profiles.map((profile) => profile.href),
-};
+import { jsonLdString } from "@/lib/schema";
 
 export default function Home() {
   return (
     <div id="top">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdString }}
       />
       <SiteHeader />
       <main id="content">
@@ -131,7 +116,7 @@ export default function Home() {
                   Twenty minutes. No slides. I&apos;ll tell you if I can help.
                 </p>
                 <div className="mt-8">
-                  <ButtonLink>Let&apos;s talk</ButtonLink>
+                  <ButtonLink location="closing-cta">Let&apos;s talk</ButtonLink>
                 </div>
                 <p className="mt-6">
                   <a

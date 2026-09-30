@@ -69,7 +69,7 @@ export function HeroStage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.32, ease }}
           >
-            <ButtonLink>Let&apos;s talk</ButtonLink>
+            <ButtonLink location="hero">Let&apos;s talk</ButtonLink>
             <ButtonLink href="#services" variant="secondary">
               See what I do
             </ButtonLink>

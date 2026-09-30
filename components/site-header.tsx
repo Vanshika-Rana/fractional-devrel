@@ -36,7 +36,10 @@ export function SiteHeader() {
           <a href="#top" className="text-sm font-extrabold tracking-tight">
             Vanshika
           </a>
-          <nav className="hidden items-center gap-4 lg:flex xl:gap-7" aria-label="Page">
+          <nav
+            className="hidden items-center gap-4 lg:flex xl:gap-7"
+            aria-label="Page"
+          >
             {links.map((link) => (
               <a
                 key={link.href}
@@ -46,7 +49,9 @@ export function SiteHeader() {
                 {link.label}
               </a>
             ))}
-            <ButtonLink size="sm">Let&apos;s talk</ButtonLink>
+            <ButtonLink size="sm" location="header">
+              Let&apos;s talk
+            </ButtonLink>
           </nav>
           <button
             type="button"
@@ -67,7 +72,11 @@ export function SiteHeader() {
           </button>
         </div>
         {open ? (
-          <nav id="mobile-nav" aria-label="Page" className="border-t-2 border-ink pb-4 lg:hidden">
+          <nav
+            id="mobile-nav"
+            aria-label="Page"
+            className="border-t-2 border-ink pb-4 lg:hidden"
+          >
             {links.map((link) => (
               <a
                 key={link.href}
@@ -79,7 +88,9 @@ export function SiteHeader() {
               </a>
             ))}
             <div className="pt-2">
-              <ButtonLink>Let&apos;s talk</ButtonLink>
+              <ButtonLink location="header-mobile-menu">
+                Let&apos;s talk
+              </ButtonLink>
             </div>
           </nav>
         ) : null}
