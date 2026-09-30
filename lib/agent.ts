@@ -316,7 +316,7 @@ export async function answerWithModel(
     headers: {
       Authorization: `Bearer ${key}`,
       "Content-Type": "application/json",
-      "HTTP-Referer": "https://devrel.van.codes",
+      "HTTP-Referer": "https://fractional.van.codes",
       "X-Title": "Vanshika fractional DevRel",
     },
     body: JSON.stringify({

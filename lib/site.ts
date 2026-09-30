@@ -2,7 +2,7 @@
 // Set NEXT_PUBLIC_SITE_URL in the host's env if the domain ever changes.
 
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://devrel.van.codes"
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://fractional.van.codes"
 ).replace(/\/$/, "");
 
 export const SITE_NAME = "Vanshika Rana";
