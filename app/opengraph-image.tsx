@@ -66,10 +66,10 @@ export default async function OpenGraphImage() {
           <div
             style={{
               display: "flex",
-              fontSize: 82,
-              fontWeight: 800,
-              lineHeight: 1.02,
-              letterSpacing: "-0.045em",
+              fontSize: 70,
+              fontWeight: 700,
+              lineHeight: 1.14,
+              letterSpacing: "-0.03em",
             }}
           >
             Developers show up.
@@ -77,11 +77,11 @@ export default async function OpenGraphImage() {
           <div
             style={{
               display: "flex",
-              marginTop: 6,
-              fontSize: 82,
-              fontWeight: 800,
-              lineHeight: 1.02,
-              letterSpacing: "-0.045em",
+              marginTop: 4,
+              fontSize: 70,
+              fontWeight: 700,
+              lineHeight: 1.14,
+              letterSpacing: "-0.03em",
               color: PINK,
             }}
           >
@@ -90,10 +90,10 @@ export default async function OpenGraphImage() {
           <div
             style={{
               display: "flex",
-              fontSize: 82,
-              fontWeight: 800,
-              lineHeight: 1.02,
-              letterSpacing: "-0.045em",
+              fontSize: 70,
+              fontWeight: 700,
+              lineHeight: 1.14,
+              letterSpacing: "-0.03em",
               color: PINK,
             }}
           >
