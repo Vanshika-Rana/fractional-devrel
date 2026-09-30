@@ -11,7 +11,7 @@ export const SITE_TITLE =
   "Fractional DevRel for Developer Tools | Vanshika Rana";
 
 export const SITE_DESCRIPTION =
-  "Fractional DevRel for developer-tool teams. Docs, demos, onboarding, and community: hire one task from $300, a docs and demo sprint, or a monthly retainer.";
+  "Fractional DevRel for developer-tool teams. Docs, demos, onboarding, and community, from one task to a monthly retainer.";
 
 export const SHORT_DESCRIPTION =
   "I help developer-tool teams go from curious to shipped: docs, demos, onboarding, and the community that keeps people around.";
