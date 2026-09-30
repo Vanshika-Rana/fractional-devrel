@@ -1,26 +1,96 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --bg: #f6f3ec;
+  --surface: #fffdf8;
+  --ink: #1c1c1c;
+  --muted: #3f3f3f;
+  --accent: #cf2a66;
+  --sun: #ffe14a;
+  --on-sun: #1c1c1c;
+  --line: #1c1c1c;
+  color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg: #141414;
+    --surface: #1e1e1e;
+    --ink: #f6f3ec;
+    --muted: #d4cfc4;
+    --accent: #ff7aa8;
+    --sun: #ffe14a;
+    --on-sun: #1c1c1c;
+    --line: #f6f3ec;
+    color-scheme: dark;
   }
 }
 
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-sun: var(--sun);
+  --color-on-sun: var(--on-sun);
+  --color-line: var(--line);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-padding-top: 6.5rem;
+  overflow-x: clip;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans), sans-serif;
+}
+
+::selection {
+  background: var(--sun);
+  color: var(--on-sun);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.site-header {
+  background: var(--bg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (scripting: none) {
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+.pattern-dots {
+  background-image: radial-gradient(
+    color-mix(in srgb, var(--ink) 13%, transparent) 1px,
+    transparent 1.1px
+  );
+  background-size: 18px 18px;
+}
+
+.pattern-hatch {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 8px,
+    color-mix(in srgb, var(--ink) 16%, transparent) 8px,
+    color-mix(in srgb, var(--ink) 16%, transparent) 9px
+  );
 }
