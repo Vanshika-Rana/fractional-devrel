@@ -16,7 +16,7 @@ const SUN = "#ffe14a";
 const host = SITE_URL.replace(/^https?:\/\//, "");
 
 export default async function OpenGraphImage() {
-  const glyphs = `Vanshika Rana, fractional DevRel Developers show up. I make sure they actually stick around. ${host}`;
+  const glyphs = `Vanshika Rana, fractional DevRel Developers show up. I make sure they actually stick around. ${host} Let's talk`;
   const fonts = await fontsFor([700, 800], glyphs);
 
   return new ImageResponse(
@@ -104,12 +104,34 @@ export default async function OpenGraphImage() {
         <div
           style={{
             display: "flex",
-            fontSize: 30,
-            fontWeight: 800,
-            color: PINK,
+            alignItems: "center",
+            justifyContent: "space-between",
           }}
         >
-          {host}
+          <div
+            style={{
+              display: "flex",
+              padding: "14px 34px",
+              border: `3px solid ${INK}`,
+              borderRadius: 999,
+              background: SUN,
+              boxShadow: `5px 5px 0 ${INK}`,
+              fontSize: 32,
+              fontWeight: 800,
+            }}
+          >
+            {"Let's talk"}
+          </div>
+          <div
+            style={{
+              display: "flex",
+              fontSize: 30,
+              fontWeight: 800,
+              color: PINK,
+            }}
+          >
+            {host}
+          </div>
         </div>
       </div>
     </div>,
